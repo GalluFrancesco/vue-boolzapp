@@ -48,14 +48,13 @@ img{
 
 .notifications-container{
     height: 65px;
-    border: black solid 1px;
+    background-color: #8DD9FB;
 }
 
 .icon-container{
     height: 40px;
     width: 40px;
     border-radius: 100%;
-    border: black solid 1px;
 }
 
 .search{
