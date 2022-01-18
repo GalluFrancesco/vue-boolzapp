@@ -19,6 +19,10 @@ img{
     border-radius: 100%;
 }
 
+input{
+    border: none;
+}
+
 /* background app */
 
 .bg-header{
@@ -42,13 +46,12 @@ img{
 
 .side-application{
     width: 300px;
-    border: black solid 1px;
     background-color: #F5F4F4;
+    border-right: darkgray solid 1px;
 }
 
 .user-container{
     height: 65px;
-    border: black solid 1px;
     background-color: #E9E9E9;
 }
 
@@ -69,16 +72,11 @@ img{
     color: #8DD9FB;
 }
 
-.search{
-    border: none;
-}
-
 /* main */
 
 .main-application{
     background: url("../img/mine.jpg") repeat-y;
     background-size: cover;
-    border: black solid 1px;
     margin-top: 65px;
     margin-bottom: 65px;
     padding: 32px 64px;
@@ -87,7 +85,6 @@ img{
 
 .this-contact{
     height: 65px;
-    border: black solid 1px;
     margin-left: 300px;
     background-color: #E9E9E9;
 }
@@ -109,7 +106,6 @@ img{
 
 .footer-main{
     height: 65px;
-    border: black solid 1px;
     margin-left: 300px;
     background-color: #E9E9E9;
     text-align: center;
