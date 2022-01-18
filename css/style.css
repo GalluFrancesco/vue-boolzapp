@@ -46,7 +46,7 @@ img{
     border: black solid 1px;
     background-color: #E9E9E9;
 }
-
+.this-contact-name,
 .user-text{
     height: 40px;
 }
@@ -76,6 +76,7 @@ img{
     height: 65px;
     border: black solid 1px;
     margin-left: 300px;
+    background-color: #E9E9E9;
 }
 
 .footer-main{
