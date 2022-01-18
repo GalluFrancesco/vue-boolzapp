@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 .avatar-container{
     width: 40px;
     border-radius: 100%;
@@ -47,6 +48,13 @@ img{
 
 .notifications-container{
     height: 65px;
+    border: black solid 1px;
+}
+
+.icon-container{
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
     border: black solid 1px;
 }
 
