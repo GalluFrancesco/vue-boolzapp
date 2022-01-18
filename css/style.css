@@ -3,3 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* background app */
+
+.bg-header{
+    height: 100px;
+    background-color: #009587;
+}
+.bg-main{
+    height: calc(100vh - 100px);
+    background-color: #D7DAD5;
+}
