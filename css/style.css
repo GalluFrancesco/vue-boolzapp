@@ -37,6 +37,7 @@ img{
 .side-application{
     width: 300px;
     border: black solid 1px;
+    background-color: #F5F4F4;
 }
 
 .user-container{
@@ -49,16 +50,8 @@ img{
     border: black solid 1px;
 }
 
-.search-container{
-    border: black solid 1px;
-}
-
 .search{
-    width: 100%;
-}
-
-.contact{
-    border: black solid 1px;
+    border: none;
 }
 
 /* main */
