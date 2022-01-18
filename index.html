@@ -31,12 +31,12 @@
                         <input type="text" class="w-100">
                     </div>
 
-                    <div v-for="(contact) in contacts" class="contacts-container">
+                    <div v-for="(contact) in contacts" class="contacts-container me-2">
                         <div class="contact d-flex">
-                            <div class="avatar-container">
+                            <div class="avatar-container m-2">
                                 <img class="img-fluid" :src="contact.avatar" alt="">
                             </div>
-                            <div class="flex-grow-1"><b>{{ contact.name }}</b></div>
+                            <div class="flex-grow-1 my-2">{{ contact.name }}</div>
                         </div>
                     </div>
 
@@ -44,7 +44,7 @@
                 <div class="main-application h-100 flex-grow-1">
                     <div class="this-contact fixed-top">
                     </div>
-                    
+
                     <div class="footer-main fixed-bottom p-3">
                         <input type="text" class="w-100 h-100">
                     </div>
