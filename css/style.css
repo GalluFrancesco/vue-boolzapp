@@ -1,9 +1,14 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.this-contact-icon,
+.user-icon,
+.this-contact-name,
+.user-text{
+    height: 40px;
 }
 
+.this-contact-icon-color,
+.icon-user-color{
+    color:#B0B0B0;
+}
 
 .avatar-container{
     width: 40px;
@@ -46,10 +51,6 @@ img{
     border: black solid 1px;
     background-color: #E9E9E9;
 }
-.this-contact-name,
-.user-text{
-    height: 40px;
-}
 
 .notifications-container{
     height: 65px;
@@ -59,7 +60,13 @@ img{
 .icon-container{
     height: 40px;
     width: 40px;
+    line-height: 40px;
+    text-align: center;
     border-radius: 100%;
+}
+
+.fa-bell-slash{
+    color: #8DD9FB;
 }
 
 .search{
@@ -105,4 +112,9 @@ img{
     border: black solid 1px;
     margin-left: 300px;
     background-color: #E9E9E9;
+    text-align: center;
+}
+
+.footer-main > input{
+    width: 750px;
 }

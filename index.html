@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 <body>
     <div id="app">
@@ -25,12 +26,17 @@
                                 <img class="img-fluid" src="./img/avatar_io.jpg" alt="">
                             </div>
                             <div class="user-text flex-grow-1 my-2">User</div>
+                            <div class="user-icon icon-user-color pe-3">
+                                <i class="fas fa-circle-notch"></i>
+                                <i class="fas fa-comment-alt px-3"></i>
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
                         </div>
                     </div>
 
                     <div class="notifications-container d-flex align-items-center">
-                        <div class="icon-container m-2">
-                            
+                        <div class="icon-container m-2 bg-white">
+                            <i class="fas fa-bell-slash"></i>
                         </div>
                         <div class="flex-grow-1 my-2">
                             <p class="m-0">Ricevi notifiche di nuovi messaggi</p>
@@ -60,6 +66,11 @@
                                 <img class="img-fluid" src="./img/avatar_1.jpg" alt="">
                             </div>
                             <div class="this-contact-name flex-grow-1 my-2">Michele</div>
+                            <div class="this-contact-icon this-contact-icon-color pe-3">
+                                <i class="fas fa-circle-notch"></i>
+                                <i class="fas fa-paperclip px-3"></i>
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
                         </div>
                     </div>
 
@@ -98,7 +109,9 @@
                     </div>
 
                     <div class="footer-main fixed-bottom p-3">
-                        <input type="text" class="w-100 h-100">
+                        <i class="far fa-smile me-4"></i>
+                        <input type="text" class="h-100">
+                        <i class="fas fa-microphone ms-4"></i>
                     </div>
                 </div>
             </div>
