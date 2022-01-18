@@ -10,7 +10,14 @@
 </head>
 <body>
     <div id="app">
-
+        <div v-for="(contact) in contacts" class="contact-container">
+            <div class="contact">
+                <div>
+                    <img :src="contact.avatar" alt="">
+                </div>
+                <div>{{ contact.name }}</div>
+            </div>
+        </div>
     </div>
    <script src="js/script.js"></script> 
 </body>
