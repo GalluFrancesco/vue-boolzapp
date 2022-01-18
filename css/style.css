@@ -69,9 +69,13 @@ img{
 /* main */
 
 .main-application{
+    background: url("../img/mine.jpg") repeat-y;
+    background-size: cover;
     border: black solid 1px;
     margin-top: 65px;
+    margin-bottom: 65px;
     padding: 32px 64px;
+    overflow-y: auto;
 }
 
 .this-contact{
@@ -92,8 +96,13 @@ img{
     background-color: #D4F9B9;
 }
 
+.contact-message{
+    background-color: white;
+}
+
 .footer-main{
     height: 65px;
     border: black solid 1px;
     margin-left: 300px;
+    background-color: #E9E9E9;
 }
