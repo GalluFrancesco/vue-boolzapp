@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+.avatar-container{
+    width: 40px;
+    border-radius: 100%;
+}
+
+img{
+    border-radius: 100%;
+}
+
 /* background app */
 
 .bg-header{
@@ -47,6 +56,11 @@
 .search{
     width: 100%;
 }
+
+.contact{
+    height: 65px;
+}
+
 /* main */
 
 .main-application{

@@ -15,35 +15,43 @@
             <div class="bg-header"></div>
             <div class="bg-main"></div>
 
-            <div class="application-container position-absolute top-50 start-50 translate-middle d-flex">
+            <div class="application-container 
+            position-absolute top-50 start-50 translate-middle d-flex">
+
                 <div class="side-application h-100">
                     <div class="user-container">
 
                     </div>
+
                     <div class="notifications-container">
 
                     </div>
+
                     <div class="search-container py-1 px-2">
                         <input type="text" class="w-100">
                     </div>
+
+                    <div v-for="(contact) in contacts" class="contacts-container">
+                        <div class="contact d-flex">
+                            <div class="avatar-container">
+                                <img class="img-fluid" :src="contact.avatar" alt="">
+                            </div>
+                            <div class="flex-grow-1"><b>{{ contact.name }}</b></div>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="main-application h-100 flex-grow-1">
                     <div class="this-contact fixed-top">
                     </div>
+                    
                     <div class="footer-main fixed-bottom p-3">
                         <input type="text" class="w-100 h-100">
                     </div>
                 </div>
             </div>
         </div>
-        <div v-for="(contact) in contacts" class="contact-container">
-            <div class="contact">
-                <div>
-                    <img :src="contact.avatar" alt="">
-                </div>
-                <div>{{ contact.name }}</div>
-            </div>
-        </div>
+        
     </div>
    <script src="js/script.js"></script> 
 </body>
