@@ -70,6 +70,8 @@ img{
 
 .main-application{
     border: black solid 1px;
+    margin-top: 65px;
+    padding: 32px 64px;
 }
 
 .this-contact{
@@ -77,6 +79,17 @@ img{
     border: black solid 1px;
     margin-left: 300px;
     background-color: #E9E9E9;
+}
+
+.user-message-content,
+.contact-message{
+    width: 200px;
+    min-height: 50px;
+    border-radius: 5px;
+}
+
+.user-message-content{
+    background-color: #D4F9B9;
 }
 
 .footer-main{
