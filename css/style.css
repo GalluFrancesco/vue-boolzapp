@@ -14,3 +14,53 @@
     height: calc(100vh - 100px);
     background-color: #D7DAD5;
 }
+
+/* application-container */
+
+.application-container{
+    height: 550px;
+    width: 1200px;
+    background-color: white;
+}
+
+/* side */
+
+.side-application{
+    width: 300px;
+    border: black solid 1px;
+}
+
+.user-container{
+    height: 65px;
+    border: black solid 1px;
+}
+
+.notifications-container{
+    height: 65px;
+    border: black solid 1px;
+}
+
+.search-container{
+    border: black solid 1px;
+}
+
+.search{
+    width: 100%;
+}
+/* main */
+
+.main-application{
+    border: black solid 1px;
+}
+
+.this-contact{
+    height: 65px;
+    border: black solid 1px;
+    margin-left: 300px;
+}
+
+.footer-main{
+    height: 65px;
+    border: black solid 1px;
+    margin-left: 300px;
+}
