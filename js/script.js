@@ -75,7 +75,7 @@ new Vue({
                 ],
             },
             {
-                name: 'Silvio',
+                name: 'Salvio',
                 avatar: './img/avatar_4.jpg',
                 visible: true,
                 messages: [
@@ -130,16 +130,14 @@ new Vue({
             })            
         },
         searchContact: function(){
-            this.newFilterContactList="";
+            this.newFilterContactList=[];
 
             this.newFilterContactList = this.contacts.filter((contact) => {
                 return contact.name.toLowerCase().startsWith(this.nameSearched) || this.nameSearched==="";
             })
         }
     },
-    created:{
-        try: function(){
+    mounted: function(){
             this.newFilterContactList=this.contacts
         }
-    }
 })
