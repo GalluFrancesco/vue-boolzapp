@@ -45,11 +45,14 @@
                     </div>
 
                     <div class="search-container py-1 px-2">
-                        <input type="text" class="search w-100" @change="searchContact"  placeholder="Cerca o inizia una nuova chat" v-model="nameSearched">
+                        <input type="text" class="search w-100"  placeholder="Cerca o inizia una nuova chat" v-model="nameSearched">
                     </div>
 
-                    <div v-for="(contact, index) in newFilterContactList" @click="thisContact(index)" class="contacts-container me-2">
-                        <div class="contact d-flex bg-white">
+                    <div v-for="(contact, index) in contacts" @click="thisContact(index)" class="contacts-container me-2">
+                        
+                        <!-- se il return della funzione searchContact è un true -->
+                        <!-- visualizza il contatto in lista -->
+                        <div v-if="searchContact(contact)" class="contact d-flex bg-white">
                             <div class="avatar-container m-2">
                                 <img class="img-fluid" :src="contact.avatar" alt="">
                             </div>

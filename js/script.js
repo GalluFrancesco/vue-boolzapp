@@ -5,9 +5,9 @@ new Vue({
         nameSearched:"",
         currentMessage:"",
         timer:null,
-        newFilterContactList:[],
+        flag: true,
         contacts: [
-            {
+                {
                 name: 'Michele',
                 avatar: './img/avatar_1.jpg',
                 visible: true,
@@ -103,10 +103,16 @@ new Vue({
             this.currentIndex=i;
         },
         sendMessage: function(){
+
+            //data in questo istante compresa di ore minuti e secondi
+            let currentDate = new Date ();
+            let now=currentDate.getDate() +'/'+ (currentDate.getMonth()+1) +'/'+ currentDate.getFullYear()+"   "
+            + currentDate.getHours() + ":" + currentDate.getMinutes() + ':' + currentDate.getSeconds(); 
+           
             //al all'invio del messaggio pusho un oggetto nella lista di messaggi
             //dell'utente con cui sto parlando
             this.contacts[this.currentIndex].messages.push({
-                date: 'ora',
+                date: now,
                 text: this.currentMessage,
                 status: 'sent'
             })
@@ -123,21 +129,23 @@ new Vue({
         autoAnswer: function(){
             const randomNumber=Math.round(Math.random() * (this.randomMessages.length - 0));
 
+            //data in questo istante compresa di ore minuti e secondi
+            let currentDate = new Date ();
+            let now=currentDate.getDate() +'/'+ (currentDate.getMonth()+1) +'/'+ currentDate.getFullYear()+"   "
+            + currentDate.getHours() + ":" + currentDate.getMinutes() + ':' + currentDate.getSeconds(); 
+
             this.contacts[this.currentIndex].messages.push({
-                date: 'ora',
+                date: now,
                 text: this.randomMessages[randomNumber],
                 status: 'received'
             })            
         },
-        searchContact: function(){
-            this.newFilterContactList=[];
-
-            this.newFilterContactList = this.contacts.filter((contact) => {
-                return contact.name.toLowerCase().startsWith(this.nameSearched) || this.nameSearched==="";
-            })
+        searchContact: function(contact){
+            if(contact.name.toLowerCase().startsWith(this.nameSearched) 
+                || this.nameSearched===""){
+                return true;
+            }
+            return false;
         }
-    },
-    mounted: function(){
-            this.newFilterContactList=this.contacts
-        }
+    }
 })
