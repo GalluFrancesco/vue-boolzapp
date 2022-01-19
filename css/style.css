@@ -104,6 +104,10 @@ input{
     background-color: white;
 }
 
+.hide{
+    display: none!important;
+}
+
 .footer-main{
     height: 65px;
     margin-left: 300px;

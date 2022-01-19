@@ -2,7 +2,6 @@ new Vue({
     el:"#app",
     data:{
         currentIndex: 0,
-        // currentAvatar: contact[currentcontact].avatar,
         contacts: [
             {
                 name: 'Michele',
@@ -94,7 +93,6 @@ new Vue({
     methods:{
         thisContact: function(i){
             this.currentIndex=i;
-            console.log(this.currentIndex)
         }
     }
 })

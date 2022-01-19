@@ -74,37 +74,28 @@
                         </div>
                     </div>
 
-                    <div class="user-message d-flex">
-                        <div class="flex-grow-1"></div>
-                        <div class="user-message-content my-1">
-                            <div class="message-txt p-1">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quas eius fuga dolorum, animi nulla maiores vitae molestias vel suscipit mollitia deserunt consequatur temporibus impedit, sint officia ipsam reprehenderit odio.
-                            </div>
-                            <div class="message-date d-flex">
-                                <div class="flex-grow-1"></div>
-                                <div class="px-1">25/12/1789 11:32</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="user-message d-flex">
-                        <div class="flex-grow-1"></div>
-                        <div class="user-message-content my-1">
-                            <div class="message-txt p-1">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quas eius fuga dolorum, animi nulla maiores vitae molestias vel suscipit mollitia deserunt consequatur temporibus impedit, sint officia ipsam reprehenderit odio.
-                            </div>
-                            <div class="message-date d-flex">
-                                <div class="flex-grow-1"></div>
-                                <div class="px-1">25/12/1789 11:32</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contact-message">
-                        <div class="message-txt p-1">
-                            Si, certo, ho capito tutto...
-                        </div>
-                        <div class="message-date d-flex">
+                    <!-- Cicla tutti messaggi del contacts[currentIndex]-->
+                    <!-- se lo status è sent stampa un user-message -->
+                    <!-- se lo status è received stampa un contact-message -->
+                    <div v-for="(message) in contacts[currentIndex].messages">
+
+                        <div class="user-message d-flex my-1" v-if="message.status==='sent'">
                             <div class="flex-grow-1"></div>
-                            <div class="px-1">25/12/1789 11:33</div>
+                            <div class="user-message-content my-1">
+                                <div class="message-txt p-1">{{message.text}}</div>
+                                <div class="message-date d-flex">
+                                    <div class="flex-grow-1"></div>
+                                    <div class="px-1">{{message.date}}</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-message my-1" v-if="message.status==='received'">
+                            <div class="message-txt p-1">{{message.text}}</div>
+                            <div class="message-date d-flex">
+                                <div class="flex-grow-1"></div>
+                                <div class="px-1">{{message.date}}</div>
+                            </div>
                         </div>
                     </div>
 
