@@ -2,8 +2,10 @@ new Vue({
     el:"#app",
     data:{
         currentIndex: 0,
+        nameSearched:"",
         currentMessage:"",
         timer:null,
+        newFilterContactList:[],
         contacts: [
             {
                 name: 'Michele',
@@ -73,7 +75,7 @@ new Vue({
                 ],
             },
             {
-                name: 'Luisa',
+                name: 'Silvio',
                 avatar: './img/avatar_4.jpg',
                 visible: true,
                 messages: [
@@ -126,6 +128,18 @@ new Vue({
                 text: this.randomMessages[randomNumber],
                 status: 'received'
             })            
+        },
+        searchContact: function(){
+            this.newFilterContactList="";
+
+            this.newFilterContactList = this.contacts.filter((contact) => {
+                return contact.name.toLowerCase().startsWith(this.nameSearched) || this.nameSearched==="";
+            })
+        }
+    },
+    created:{
+        try: function(){
+            this.newFilterContactList=this.contacts
         }
     }
 })
