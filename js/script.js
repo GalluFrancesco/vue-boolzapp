@@ -3,6 +3,7 @@ new Vue({
     data:{
         currentIndex: 0,
         currentMessage:"",
+        timer:null,
         contacts: [
             {
                 name: 'Michele',
@@ -88,19 +89,43 @@ new Vue({
                     }
                 ],
             },
+        ],
+        randomMessages:[
+            "Non ho capito",
+            "Al tuo timer mancano 3 ere geologiche",
+            "Al momento non esiste nessun promemoria",
         ]
-        
     },
     methods:{
         thisContact: function(i){
             this.currentIndex=i;
         },
         sendMessage: function(){
+            //al all'invio del messaggio pusho un oggetto nella lista di messaggi
+            //dell'utente con cui sto parlando
             this.contacts[this.currentIndex].messages.push({
                 date: 'ora',
                 text: this.currentMessage,
                 status: 'sent'
             })
+
+            //pulisco il date currentMessage e di conseguenza l'imput
+            this.currentMessage="";
+
+            //dopo 1 secondo dal push del messaggio inviato  
+            //genero un messaggio random ricevuto
+            this.timer=setTimeout(() => {
+                this.autoAnswer();
+            }, 1000)
+        },
+        autoAnswer: function(){
+            const randomNumber=Math.round(Math.random() * (this.randomMessages.length - 0));
+
+            this.contacts[this.currentIndex].messages.push({
+                date: 'ora',
+                text: this.randomMessages[randomNumber],
+                status: 'received'
+            })            
         }
     }
 })
