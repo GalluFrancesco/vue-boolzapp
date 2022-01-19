@@ -2,6 +2,7 @@ new Vue({
     el:"#app",
     data:{
         currentIndex: 0,
+        currentMessage:"",
         contacts: [
             {
                 name: 'Michele',
@@ -93,6 +94,13 @@ new Vue({
     methods:{
         thisContact: function(i){
             this.currentIndex=i;
+        },
+        sendMessage: function(){
+            this.contacts[this.currentIndex].messages.push({
+                date: 'ora',
+                text: this.currentMessage,
+                status: 'sent'
+            })
         }
     }
 })
