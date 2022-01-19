@@ -95,7 +95,7 @@ new Vue({
         randomMessages:[
             "Non ho capito",
             "Al tuo timer mancano 3 ere geologiche",
-            "Al momento non esiste nessun promemoria",
+            "Al momento non esiste nessun promemoria"
         ]
     },
     methods:{
@@ -127,7 +127,7 @@ new Vue({
             }, 1000)
         },
         autoAnswer: function(){
-            const randomNumber=Math.round(Math.random() * (this.randomMessages.length - 0));
+            const randomNumber=Math.round(Math.random() * ((this.randomMessages.length-1) - 0));
 
             //data in questo istante compresa di ore minuti e secondi
             let currentDate = new Date ();
