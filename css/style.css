@@ -118,3 +118,14 @@ input{
 .footer-main > input{
     width: 750px;
 }
+
+.menu{
+    display: none;
+    width: 100px;
+    background-color: white;
+    margin: 6px 0
+}
+
+.show{
+    display: inline-block;
+}

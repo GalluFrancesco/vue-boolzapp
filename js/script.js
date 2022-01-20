@@ -3,7 +3,9 @@ new Vue({
     data:{
         currentIndex: 0,
         nameSearched:"",
+        currentMessageIndex:0,
         currentMessage:"",
+        show:"",
         timer:null,
         flag: true,
         contacts: [
@@ -135,6 +137,15 @@ new Vue({
         },
         now: function(){
             return dayjs().format('DD/MM/YYYY  HH:mm:ss')
+        },
+        thisMessage: function(index){
+            this.currentMessageIndex=index;
+        },
+        deleteMessage: function (messages, position){
+            messages.splice(position, 1);
+        },
+        showMenu: function(){
+            this.show="show";
         }
     }
 })

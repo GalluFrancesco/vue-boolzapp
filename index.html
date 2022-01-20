@@ -81,13 +81,19 @@
                     <!-- Cicla tutti messaggi del contacts[currentIndex]-->
                     <!-- se lo status è sent aggiunge la classe sent -->
                     <!-- se lo status è received aggiunge la classe received -->
-                    <div v-for="(message) in contacts[currentIndex].messages">
-                        <div class="d-flex" :class="{'flex-row-reverse' : message.status==='sent'}">
+                    <div v-for="(message, currentMessageIndex) in contacts[currentIndex].messages">
+                        <div class="d-flex"
+                            :class="{'flex-row-reverse' : message.status==='sent'}" 
+                            @click="thisMessage(currentMessageIndex); showMenu()">
                             <div class="message my-1" :class="message.status">
                                 <div class="message-txt p-1">{{message.text}}</div>
                                 <div class="message-date d-flex flex-row-reverse">
                                     <div class="px-1">{{message.date}}</div>
                                 </div>
+                            </div>
+                            <div v-if="" class="menu" :class="show">
+                                 <div @click="deleteMessage(contacts[currentIndex].messages, currentMessageIndex)"
+                                 >Cancella</div>
                             </div>
                         </div>
                     </div>
