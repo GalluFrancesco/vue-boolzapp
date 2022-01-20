@@ -120,10 +120,18 @@ input{
 }
 
 .menu{
+    border-top: lightgray solid 1px;
+    border-left: lightgray solid 1px;
+    border-right: lightgray solid 1px;
     display: none;
-    width: 100px;
+    width: 150px;
+    height: auto;
     background-color: white;
     margin: 6px 0
+}
+
+.menu > div{
+    border-bottom: lightgray solid 1px;
 }
 
 .show{

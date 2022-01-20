@@ -3,7 +3,7 @@ new Vue({
     data:{
         currentIndex: 0,
         nameSearched:"",
-        currentMessageIndex:0,
+        currentMessageIndex:-1,
         currentMessage:"",
         show:"",
         timer:null,
@@ -143,6 +143,7 @@ new Vue({
         },
         deleteMessage: function (messages, position){
             messages.splice(position, 1);
+            this.currentMessageIndex=-1;
         },
         showMenu: function(){
             this.show="show";
