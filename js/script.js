@@ -5,9 +5,7 @@ new Vue({
         nameSearched:"",
         currentMessageIndex:-1,
         currentMessage:"",
-        show:"",
         timer:null,
-        flag: true,
         contacts: [
                 {
                 name: 'Michele',
@@ -145,8 +143,12 @@ new Vue({
             messages.splice(position, 1);
             this.currentMessageIndex=-1;
         },
-        showMenu: function(){
-            this.show="show";
+        positionMenu: function(status){
+            if(status==="sent"){
+                return "top-50 end-50"
+            }else{
+                return "top-50 start-50"
+            }
         }
     }
 })
