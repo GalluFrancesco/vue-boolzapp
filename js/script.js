@@ -103,16 +103,11 @@ new Vue({
             this.currentIndex=i;
         },
         sendMessage: function(){
-
-            //data in questo istante compresa di ore minuti e secondi
-            let currentDate = new Date ();
-            let now=currentDate.getDate() +'/'+ (currentDate.getMonth()+1) +'/'+ currentDate.getFullYear()+"   "
-            + currentDate.getHours() + ":" + currentDate.getMinutes() + ':' + currentDate.getSeconds(); 
            
             //al all'invio del messaggio pusho un oggetto nella lista di messaggi
             //dell'utente con cui sto parlando
             this.contacts[this.currentIndex].messages.push({
-                date: now,
+                date: this.now(),
                 text: this.currentMessage,
                 status: 'sent'
             })
@@ -129,13 +124,8 @@ new Vue({
         autoAnswer: function(){
             const randomNumber=Math.round(Math.random() * ((this.randomMessages.length-1) - 0));
 
-            //data in questo istante compresa di ore minuti e secondi
-            let currentDate = new Date ();
-            let now=currentDate.getDate() +'/'+ (currentDate.getMonth()+1) +'/'+ currentDate.getFullYear()+"   "
-            + currentDate.getHours() + ":" + currentDate.getMinutes() + ':' + currentDate.getSeconds(); 
-
             this.contacts[this.currentIndex].messages.push({
-                date: now,
+                date: this.now(),
                 text: this.randomMessages[randomNumber],
                 status: 'received'
             })            
@@ -146,6 +136,9 @@ new Vue({
                 return true;
             }
             return false;
+        },
+        now: function(){
+            return dayjs().format('DD/MM/YYYY  HH:mm:ss')
         }
     }
 })
