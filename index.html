@@ -79,26 +79,15 @@
                     </div>
 
                     <!-- Cicla tutti messaggi del contacts[currentIndex]-->
-                    <!-- se lo status è sent stampa un user-message -->
-                    <!-- se lo status è received stampa un contact-message -->
+                    <!-- se lo status è sent aggiunge la classe sent -->
+                    <!-- se lo status è received aggiunge la classe received -->
                     <div v-for="(message) in contacts[currentIndex].messages">
-
-                        <div class="user-message d-flex my-1" v-if="message.status==='sent'">
-                            <div class="flex-grow-1"></div>
-                            <div class="user-message-content my-1">
+                        <div class="d-flex" :class="{'flex-row-reverse' : message.status==='sent'}">
+                            <div class="message my-1" :class="message.status">
                                 <div class="message-txt p-1">{{message.text}}</div>
-                                <div class="message-date d-flex">
-                                    <div class="flex-grow-1"></div>
+                                <div class="message-date d-flex flex-row-reverse">
                                     <div class="px-1">{{message.date}}</div>
                                 </div>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-message my-1" v-if="message.status==='received'">
-                            <div class="message-txt p-1">{{message.text}}</div>
-                            <div class="message-date d-flex">
-                                <div class="flex-grow-1"></div>
-                                <div class="px-1">{{message.date}}</div>
                             </div>
                         </div>
                     </div>

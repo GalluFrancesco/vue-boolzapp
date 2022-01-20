@@ -89,18 +89,18 @@ input{
     background-color: #E9E9E9;
 }
 
-.user-message-content,
-.contact-message{
+.message{
     width: 200px;
     min-height: 50px;
     border-radius: 5px;
 }
 
-.user-message-content{
+.sent{
     background-color: #D4F9B9;
+    align-self: flex-end;
 }
 
-.contact-message{
+.received{
     background-color: white;
 }
 
