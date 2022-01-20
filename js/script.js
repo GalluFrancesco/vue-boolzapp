@@ -131,11 +131,8 @@ new Vue({
             })            
         },
         searchContact: function(contact){
-            if(contact.name.toLowerCase().startsWith(this.nameSearched) 
-                || this.nameSearched===""){
-                return true;
-            }
-            return false;
+            return contact.name.toLowerCase().startsWith(this.nameSearched)
+                
         },
         now: function(){
             return dayjs().format('DD/MM/YYYY  HH:mm:ss')
